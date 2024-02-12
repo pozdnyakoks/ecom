@@ -1,0 +1,106 @@
+$light: #F4F3EE;
+$dark: #463F3A;
+$grey: #8A817C;
+$silver: #BCB8B1;
+$peach: #E0AFA0;
+
+
+@mixin xlMidle {
+  @media (max-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin xlUp {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin lgMiddle {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin mb {
+  @media (max-width: 468px) {
+    @content;
+  }
+}
+
+@mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin text {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+@mixin bigText {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+
+  @include lg {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+@mixin tagText {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+}
+
+@mixin subtitle {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+
+  @include lg {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+
+@mixin title {
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 72px;
+
+  @include lg {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
